@@ -7,10 +7,18 @@
 #returned from the top of the indicated file. The selected file content should be printed to the terminal
 #in R.
 
-#Use the head function in R to simply accomplish this
-#"filename" should be replaced with whatever you want to read
-#n=1 can be replaced with any integer to read the first n number of rows
-head(filename,n=1)
+#set working directory
+setwd("/Users/Public/Documents/Biocomputing2020_Tutorial09")
+
+#define a variable with the file
+wagesvar <- read.table(file='wages.csv',sep=',',header=TRUE,stringsAsFactors = FALSE)
+
+#variable for number of lines (integer can be changed based on how many lines you want returned)
+numlines <- 1
+
+#Use the head command with the file variable and the variable for number of lines
+#Note: the output of this function is the header line and the first line of data
+head(wagesvar,n=numlines)
 
 #Question 2
 # Load the data contained in the provided 'iris.csv' file and write R code to do the following things
